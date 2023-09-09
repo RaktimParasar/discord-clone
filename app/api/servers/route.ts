@@ -33,7 +33,7 @@ export async function POST(req: Request) {
         },
       },
     });
-    console.log("res....>>", NextResponse.json(server));
+
     return NextResponse.json(server);
   } catch (error) {
     console.log("[SERVER_POST]", error);
