@@ -40,8 +40,9 @@ export const InviteModal = () => {
   const onGenerateNewInviteLink = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.patch(`/api/servers/${server?.id}`);
-      console.group("response", response);
+      const response = await axios.patch(
+        `/api/servers/${server?.id}/invite-code`
+      );
       onOpen("invite", { server: response.data });
     } catch (error) {
       setIsLoading(false);
